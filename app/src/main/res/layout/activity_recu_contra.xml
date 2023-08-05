@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/recucontra"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".RecuContra">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTres"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textStyle="bold"
+            android:text="¿No recuerdas tu contraseña?"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"
+            android:text="¡No te preocupes! Nos sucede a todos. Ingresa tu email y contraseña y te ayudaremos"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/background_edit_text"
+            android:hint="Correo electrónico"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#000000"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/nuevaContraseñaET"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/background_edit_text"
+                android:hint="Contraseña"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:maxLength="10"
+                android:paddingEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="#000000"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/confnuevacontraET"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/background_edit_text"
+                android:hint="Confirmar contraseña"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:textSize="16sp"
+                android:paddingStart="20dp"
+                android:maxLength="10"
+                android:paddingEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BtnLogin2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_btn_primary"
+            android:onClick="recuperarContraseña"
+            android:text="Solicitar"
+            android:textAllCaps="false"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+</FrameLayout>
